@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debugging Example</title>
+</head>
+
+<body>
+    <script>
+        const item = {
+            name: 'Foo',
+            description: 'Fusce consequat dui est, semper.',
+            price: 100,
+            quantity: 5,
+            discount: function (percent) {
+                const discount = this.price * percent / 100;
+                const result = this.price - discount;
+                return result;
+            },
+        };
+        console.log("should equal to 80 => ",item.discount(20))   // should return 80
+        console.log("should equal to 50 => ",item.discount(50))   // should return 50
+        console.log("should equal to 75 => ",item.discount(25))   // should return 75
+
+
+    </script>
+</body>
+
+</html>
